@@ -1,0 +1,81 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, Times New Roman;
+  }
+  
+  #main {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: auto auto 1fr auto;
+   grid-template-areas:
+     "header header"
+     "image image"
+     "bio info"
+     "footer footer";
+    grid-gap: 10px;
+  }
+  
+  #title {
+    grid-area: header;
+    text-align: center;
+   background-color: orange;
+  }
+  
+  h1{
+    font-size: 56px;
+  }
+  
+  h2, h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #content {
+    grid-area: info;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+      "image"
+      "text-info";
+     grid-gap: 10px;
+  }
+  
+  
+  #img-div{
+    grid-area: image;
+    background-color:orange;
+    padding: 5px
+  }
+  
+  #image{
+    display: block;
+    max-width: 80%;
+      height: auto;
+    border-radius: 15%;
+    padding: 10px 10px 0px 10px;
+  }
+  
+  #img-caption {
+    text-align: center;
+  }
+  
+  
+  #side-bar {
+    grid-area: bio; 
+    background-color: darkgray;
+    align-self: center;
+    padding: 20px;
+    
+  }
+  
+  #tribute-info {
+    grid-area: text-info;
+    background-color: darkgray;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  #closing {
+    grid-area: footer;
+    background-color: orange;
+    padding: 5px;
+  }
